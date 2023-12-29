@@ -1,0 +1,99 @@
+$primary-color: #4c53f1;
+$secondary-color: #a5a5a5;
+$danger-color: #d80032;
+$background-color: #ffecd8;
+$foreground-color: #fff;
+$rounded-corner: 15px;
+
+@mixin display-center($vertical: center, $alignment: center, $direction: row) {
+  display: flex;
+  justify-content: $vertical;
+  align-items: $alignment;
+  flex-direction: $direction;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $background-color;
+  font-size: 1.8rem;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  @include display-center($vertical: flex-start, $direction: column);
+
+  background-color: $foreground-color;
+  width: 70%;
+  height: 60vh;
+  margin: 60px auto;
+  border-radius: 30px;
+  padding: 60px 0;
+}
+
+.main {
+  @include display-center();
+
+  margin: 32px 0;
+  width: 100%;
+  column-gap: 20px;
+}
+
+.output-group {
+  @include display-center();
+
+  align-items: center;
+  column-gap: 10px;
+}
+
+.task-label {
+  color: $primary-color;
+  font-weight: 500;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+input[type="text"] {
+  padding: 20px;
+  width: 50%;
+  outline: 0;
+  border: 2px solid $secondary-color;
+  border-radius: $rounded-corner;
+  font-size: inherit;
+}
+
+input[type="checkbox"] {
+  height: 2.2rem;
+  width: 2.2rem;
+  accent-color: $primary-color;
+  cursor: pointer;
+}
+
+.btn {
+  border-radius: $rounded-corner;
+  outline: 0;
+  border: 0;
+  background: none;
+  font-size: inherit;
+  font-weight: 600;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--primary {
+    color: white;
+    background-color: $primary-color;
+    padding: 2rem 4rem;
+  }
+
+  &--danger {
+    color: $danger-color;
+    text-decoration: underline;
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,89 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #ffecd8;
+  font-size: 1.8rem;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  width: 70%;
+  height: 60vh;
+  margin: 60px auto;
+  border-radius: 30px;
+  padding: 60px 0;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 32px 0;
+  width: 100%;
+  column-gap: 20px;
+}
+
+.output-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.task-label {
+  color: #4c53f1;
+  font-weight: 500;
+}
+.task-label:hover {
+  cursor: pointer;
+}
+
+input[type=text] {
+  padding: 20px;
+  width: 50%;
+  outline: 0;
+  border: 2px solid #a5a5a5;
+  border-radius: 15px;
+  font-size: inherit;
+}
+
+input[type=checkbox] {
+  height: 2.2rem;
+  width: 2.2rem;
+  accent-color: #4c53f1;
+  cursor: pointer;
+}
+
+.btn {
+  border-radius: 15px;
+  outline: 0;
+  border: 0;
+  background: none;
+  font-size: inherit;
+  font-weight: 600;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn--primary {
+  color: white;
+  background-color: #4c53f1;
+  padding: 2rem 4rem;
+}
+.btn--danger {
+  color: #d80032;
+  text-decoration: underline;
+  font-size: 2rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
