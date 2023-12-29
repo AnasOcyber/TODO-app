@@ -3,4 +3,5 @@ src/*.scss
 src/*js.ts
 
 dist/*.js.map
+
 dist/*.css.map
