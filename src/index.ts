@@ -7,6 +7,7 @@ function addTask(title: string): void {
 
   div.className = "output-group";
   taskLabel.className = "label";
+  taskLabel.htmlFor = "taskCheck";
   taskLabel.textContent = title;
   button.className = "btn btn--danger";
   button.textContent = "Delete";
@@ -18,6 +19,7 @@ function addTask(title: string): void {
   });
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
+  checkbox.id = "taskCheck";
 
   const task = document.createElement("div");
   task.className = "task";

@@ -45,7 +45,6 @@ body {
   @include display-center($vertical: space-between);
   gap: 100px;
   margin: 32px 0;
-  overflow: hidden;
 
   .task {
     @include display-center();
@@ -83,8 +82,8 @@ input[type="text"] {
 }
 
 input[type="checkbox"] {
-  height: 2.2rem;
-  width: 2.2rem;
+  height: 22px;
+  width: 22px;
   accent-color: $primary-color;
   cursor: pointer;
 }
