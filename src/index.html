@@ -15,16 +15,20 @@
   <body>
     <div class="container">
       <div class="main">
-        <input type="text" placeholder="Add new task" />
-        <button class="btn btn--primary">Add Task</button>
+        <input
+          id="task"
+          onchange="handleTextChange()"
+          onkeypress="handleKeyPress(event)"
+          type="text"
+          placeholder="Add new task"
+          name="task"
+        />
+        <button onclick="addTask(handleTextChange())" class="btn btn--primary">
+          Add Task
+        </button>
       </div>
-      <div class="main">
-        <div class="output-group">
-          <input type="checkbox" id="task" />
-          <label class="task-label" for="task">Create a todo app.</label>
-        </div>
-        <button class="btn btn--danger">Delete</button>
-      </div>
+      <ul></ul>
     </div>
+    <script src="/dist/index.js"></script>
   </body>
 </html>

@@ -27,7 +27,7 @@ body {
 
   background-color: $foreground-color;
   width: 70%;
-  height: 60vh;
+  min-height: 60vh;
   margin: 60px auto;
   border-radius: 30px;
   padding: 60px 0;
@@ -48,12 +48,21 @@ body {
   column-gap: 10px;
 }
 
-.task-label {
+li {
+  list-style: none;
   color: $primary-color;
   font-weight: 500;
+  cursor: pointer;
+  user-select: none;
 
-  &:hover {
-    cursor: pointer;
+  &::before {
+    content: "";
+    position: relative;
+    height: 24px;
+    width: 24px;
+    border-radius: 3px;
+    background-image: url(/assets/unchecked.svg);
+    background-size: cover;
   }
 }
 
@@ -80,6 +89,7 @@ input[type="checkbox"] {
   background: none;
   font-size: inherit;
   font-weight: 600;
+  white-space: nowrap;
 
   &:hover {
     cursor: pointer;
