@@ -41,17 +41,11 @@ body {
   column-gap: 20px;
 }
 
-@media screen and (max-width: 700px) {
-  .input-group {
-    @include display-center($direction: column);
-    row-gap: 20px;
-  }
-}
-
 .output-group {
   @include display-center($vertical: space-between);
   gap: 100px;
   margin: 32px 0;
+  overflow: hidden;
 
   .task {
     @include display-center();
@@ -59,9 +53,17 @@ body {
   }
 }
 
+@media screen and (max-width: 700px) {
+  .input-group,
+  .output-group {
+    @include display-center($direction: column);
+    row-gap: 20px;
+  }
+}
+
 ul {
   padding: 0;
-  width: 60%;
+  width: 70%;
 
   li {
     list-style: none;
