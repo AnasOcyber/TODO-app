@@ -3,12 +3,12 @@ function addTask(title) {
     var _a;
     const tasksList = document.getElementsByTagName("ul");
     const item = document.createElement("li");
-    const span = document.createElement("span");
+    const taskLabel = document.createElement("label");
     const button = document.createElement("button");
     const div = document.createElement("div");
-    div.className = "main output-group";
-    span.className = "label";
-    span.textContent = title;
+    div.className = "output-group";
+    taskLabel.className = "label";
+    taskLabel.textContent = title;
     button.className = "btn btn--danger";
     button.textContent = "Delete";
     button.addEventListener("click", () => {
@@ -17,7 +17,13 @@ function addTask(title) {
             item.remove();
         }
     });
-    div.appendChild(span);
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    const task = document.createElement("div");
+    task.className = "task";
+    task.appendChild(checkbox);
+    task.appendChild(taskLabel);
+    div.appendChild(task);
     div.append(button);
     item.appendChild(div);
     (_a = tasksList[0]) === null || _a === void 0 ? void 0 : _a.append(item);

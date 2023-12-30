@@ -33,15 +33,12 @@ body {
   padding: 60px 0;
 }
 
-.main {
-  @include display-center();
-
-  margin: 32px 0;
-  column-gap: 20px;
-}
-
 .input-group {
+  @include display-center();
+  margin: 32px 0;
+
   width: 100%;
+  column-gap: 20px;
 }
 
 @media screen and (max-width: 700px) {
@@ -52,24 +49,25 @@ body {
 }
 
 .output-group {
-  @include display-center($vertical: space-around);
+  @include display-center($vertical: space-between);
+  gap: 100px;
+  margin: 32px 0;
+
+  .task {
+    @include display-center();
+    gap: 10px;
+  }
 }
 
-li {
-  list-style: none;
-  color: $primary-color;
-  font-weight: 500;
-  cursor: pointer;
-  user-select: none;
+ul {
+  padding: 0;
+  width: 60%;
 
-  &::before {
-    content: "";
-    position: relative;
-    height: 24px;
-    width: 24px;
-    border-radius: 3px;
-    background-image: url(/assets/unchecked.svg);
-    background-size: cover;
+  li {
+    list-style: none;
+    color: $primary-color;
+    font-weight: 500;
+    cursor: pointer;
   }
 }
 
