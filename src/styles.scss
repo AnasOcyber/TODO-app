@@ -26,7 +26,7 @@ body {
   @include display-center($vertical: flex-start, $direction: column);
 
   background-color: $foreground-color;
-  width: 70%;
+  width: 70vw;
   min-height: 60vh;
   margin: 60px auto;
   border-radius: 30px;
@@ -37,15 +37,22 @@ body {
   @include display-center();
 
   margin: 32px 0;
-  width: 100%;
   column-gap: 20px;
 }
 
-.output-group {
-  @include display-center();
+.input-group {
+  width: 100%;
+}
 
-  align-items: center;
-  column-gap: 10px;
+@media screen and (max-width: 700px) {
+  .input-group {
+    @include display-center($direction: column);
+    row-gap: 20px;
+  }
+}
+
+.output-group {
+  @include display-center($vertical: space-around);
 }
 
 li {

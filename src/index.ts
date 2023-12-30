@@ -5,7 +5,7 @@ function addTask(title: string): void {
   const button = document.createElement("button");
   const div = document.createElement("div");
 
-  div.className = "main";
+  div.className = "main output-group";
   span.className = "label";
   span.textContent = title;
   button.className = "btn btn--danger";
