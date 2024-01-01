@@ -23,6 +23,13 @@ function addTask(title) {
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.id = taskId;
+        checkbox.addEventListener("click", (e) => {
+            const ischecked = e.target.checked;
+            if (ischecked)
+                taskLabel.style.textDecoration = "line-through";
+            if (!ischecked)
+                taskLabel.style.textDecoration = "none";
+        });
         const task = document.createElement("div");
         task.className = "task";
         task.appendChild(checkbox);
