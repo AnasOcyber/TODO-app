@@ -7,9 +7,10 @@ function addTask(title) {
         const taskLabel = document.createElement("label");
         const button = document.createElement("button");
         const div = document.createElement("div");
+        const taskId = Math.floor(Math.random() * 101).toString();
         div.className = "output-group";
         taskLabel.className = "label";
-        taskLabel.htmlFor = "taskCheck";
+        taskLabel.htmlFor = taskId;
         taskLabel.textContent = title;
         button.className = "btn btn--danger";
         button.textContent = "Delete";
@@ -21,7 +22,7 @@ function addTask(title) {
         });
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
-        checkbox.id = "taskCheck";
+        checkbox.id = taskId;
         const task = document.createElement("div");
         task.className = "task";
         task.appendChild(checkbox);
